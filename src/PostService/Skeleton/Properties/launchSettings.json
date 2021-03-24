@@ -1,0 +1,33 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:52299",
+      "sslPort": 44368
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "OpenAPI",
+        "environmentVariables": {
+            "ASPNETCORE_ENVIRONMENT": "Development",
+            "SKELETON_READ_WRITE_CONNECTION_STRING": "server=localhost;user id=user;password=password;port=3306;database=db;",
+            "SEKELETON_READ_ONLY_CONNECTION_STRING": "server=localhost;user id=user;password=password;port=3306;database=db;"
+        }
+    },
+    "Skeleton": {
+      "commandName": "Project",
+      "dotnetRunMessages": "true",
+      "launchBrowser": true,
+      "launchUrl": "OpenAPI",
+      "applicationUrl": "https://localhost:5001;http://localhost:5000",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

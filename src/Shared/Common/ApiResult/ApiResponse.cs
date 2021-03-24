@@ -1,0 +1,43 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Common.ApiResult
+{
+	public class ApiResponse<T>
+	{
+		public bool Successful { get; set; }
+
+		public T Result { get; set; }
+
+		public int? ErrorCode { get; set; }
+
+		public string ErrorMessage { get; set; }
+
+		public ApiResponse() { }
+
+		public ApiResponse(T result)
+		{
+			Successful = true;
+			Result = result;
+		}
+
+		public ApiResponse(bool successful)
+		{
+			Successful = successful;
+		}
+
+		public ApiResponse(int errorCode, string errorMessage)
+		{
+			ErrorCode = errorCode;
+			ErrorMessage = errorMessage;
+		}
+
+		public ApiResponse(int errorCode, string errorMessage, T result)
+		{
+			ErrorCode = errorCode;
+			ErrorMessage = errorMessage;
+			Result = result;
+		}
+	}
+}
